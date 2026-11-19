@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100dvh;
+  }
+
+  body {
+    overscroll-behavior: none;
+    background-color: #0b1326;
+    color: #dae2fd;
+  }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Hide scrollbars cleanly as in Stitch design */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+/* Light theme surface adaptation when toggled on Profile page */
+html.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
